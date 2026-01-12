@@ -231,14 +231,14 @@ const categories = [
   },
 ];
 
-export function getSession({ sessionId, catId }) {
+export function getSession({ sessionID, catID }) {
   return categories
-    .find(({ id }) => id === catId)
-    .sessions.find(({ id }) => id === sessionId);
+    .find(({ id }) => id === catID)
+    .sessions.find(({ id }) => id === sessionID);
 }
 
-export function getCategory(catId) {
-  return categories.find(({ id }) => id === catId);
+export function getCategory(catID) {
+  return categories.find(({ id }) => id === catID);
 }
 
 export function getCategories() {

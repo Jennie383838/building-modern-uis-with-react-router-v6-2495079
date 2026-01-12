@@ -1,10 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-
-import Home from "./Home";
-import About from "./About";
-import Categories from "./Categories";
-import Category from "./Category";
-import Header from "./Header";
+import Home from './Home'
+import Categories from "./Categories"
+import About from "./About"
+import Header from "./Header"
 
 function App() {
   return (
@@ -12,15 +10,9 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home title="Welcome to Red30 Tech" />} />
-        <Route path="about" element={<About />} />
-        <Route path="categories" element={<Categories />}>
-          <Route path=":catId" element={<Category />} />
-        </Route>
-        <Route
-          path="*"
-          element={<h1 className="not-found">Page Not Found</h1>}
-        />
+        <Route path="/" element={<Home title="Welcome to Red30 Tech"/>} />
+        <Route path="categories" element={<Categories />} />
+        <Route path="about" element={<About />}/>
       </Routes>
 
       <footer className="container">
